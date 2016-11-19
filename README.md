@@ -7,7 +7,7 @@
 
 ---
 
-> A starter Kit for front-end developer including [Gulp](http://gulpjs.com), [JQuery](https://github.com/jquery/jquery), [Bootstrap Sass](https://github.com/twbs/bootstrap-sass), [Sass](http://sass-lang.com), [Jade](http://jade-lang.com), [Babel](https://babeljs.io), [ES2015](https://babeljs.io/docs/learn-es2015/), [webpack](http://webpack.github.io), [Karma](https://karma-runner.github.io/)
+> A starter Kit for front-end developer including [Gulp](http://gulpjs.com), [JQuery](https://github.com/jquery/jquery), [Bootstrap 4](https://v4-alpha.getbootstrap.com), [font-awesome](http://fontawesome.io), [Sass](http://sass-lang.com), [Jade](http://jade-lang.com), [Babel](https://babeljs.io), [ES2015](https://babeljs.io/docs/learn-es2015/), [webpack](http://webpack.github.io), [Karma](https://karma-runner.github.io/)
 
 This seed repo is a starter kit for front-end developer that needs an environment allowing them to speed up development while ensuring good practice and overall quality.
 

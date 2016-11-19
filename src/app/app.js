@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import Bootstrap from 'bootstrap-sass';
+import 'tether';
+import 'bootstrap';
 import { Calculator } from './calculator/calculator';
 
 class App {
@@ -7,6 +8,10 @@ class App {
     this._calculator = new Calculator();
     this._$input = $('#res');
     this.addEvent();
+
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
   }
 
   render() {

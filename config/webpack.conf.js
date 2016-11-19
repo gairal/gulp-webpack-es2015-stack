@@ -1,5 +1,5 @@
 var path = require('path');
-var webpack = require("webpack");
+var webpack = require('webpack');
 
 module.exports = {
 	module: {
@@ -14,8 +14,10 @@ module.exports = {
 	},
 	plugins: [
 		new webpack.ProvidePlugin({
-			$: "jquery",
-			jQuery: "jquery"
+			$: 'jquery',
+			jQuery: 'jquery',
+			Tether: 'tether',
+			"window.Tether": 'tether'
 		})
 	],
 	output: {

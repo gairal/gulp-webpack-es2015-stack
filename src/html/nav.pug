@@ -1,16 +1,11 @@
-nav.navbar.navbar-inverse
-  .container-fluid
-    .navbar-header
-      button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar-collapse', aria-expanded='false')
-        span.sr-only Toggle navigation
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-      a.navbar-brand(href='#') Brand
-
-    #navbar-collapse.collapse.navbar-collapse
-      ul.nav.navbar-nav
-        li.active
-          a(href='#') Link
-        li
-          a(href='#') Link
+nav.navbar.navbar-fixed-top.navbar-full.navbar-dark.bg-inverse
+  button.navbar-toggler.hidden-lg-up(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+  #navbarResponsive.collapse.navbar-toggleable-md
+    a.navbar-brand(href='#') Brand
+    ul.nav.navbar-nav
+      li.nav-item.active
+        a.nav-link(href='#') Link
+      li.nav-item
+        a.nav-link(href='#') Link
+    form.form-inline.float-xs-right
+      button.btn.btn-outline-primary(type='button') Log In
