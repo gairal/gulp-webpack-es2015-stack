@@ -20,10 +20,6 @@ class App {
 
   addEvent() {
     let $buttons = $(':button');
-    var hello = 0;
-    if(hello ===0 ) {
-      hello = 2;
-    }
 
     $.each($buttons, (i, v) => {
       let elt = $(v);
