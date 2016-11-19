@@ -1,0 +1,52 @@
+{
+    "base": {
+        "src": "src/",
+        "build": "build/",
+        "compile": "compile/",
+        "test": "test/",
+        "vendor": "vendor/"
+    },
+    "path": {
+        "sass": "assets/scss/",
+        "css": "assets/css/",
+        "images": "assets/img/",
+        "fonts": "assets/fonts/",
+        "js": "app/",
+        "root": "root/"
+    },
+    "files": {
+        "index": "index.html",
+        "html": "**/*.html",
+        "pug": "**/*.pug",
+        "pugindex": "index.pug",
+        "sass": "app.scss",
+        "sassAll": "**/*.scss",
+        "css": "**/*.css",
+        "js": "**/*.js",
+        "fonts": "**",
+        "images": "{,*/,*/*/}*.{png,jpg,jpeg,gif}",
+        "root": "**"
+    },
+    "vendor":{
+        "js": [],
+        "assets": [
+          "node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot",
+          "node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.svg",
+          "node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.tts",
+          "node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
+          "node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
+      ]
+    },
+    "env": {
+        "dev": {
+            "api_url": "//api.dev.example.com",
+            "host": "dev.example.com",
+            "path": "/home/webadmin/htdocs/example.com"
+        },
+        "prod": {
+            "api_url": "//api.example.com",
+            "host": "example.com",
+            "path": "/home/webadmin/htdocs/example.com"
+        }
+    }
+}

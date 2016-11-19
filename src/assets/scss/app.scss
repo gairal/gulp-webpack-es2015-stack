@@ -1,0 +1,34 @@
+@import 'common/variables';
+@import 'common/mixins';
+@import 'common/bootstrap';
+
+/**************************************************
+ ******* Put you code here or in subfolders *******
+ *************************************************/
+
+/******* GLOBAL *******/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.calc {
+  button {
+    display: block;
+    width: 100%;
+  }
+}
+
+input {
+  &[type='text'] {
+    height: 50px;
+    font-size: 25px;
+  }
+}
+
+/******* SECTION XXX *******/

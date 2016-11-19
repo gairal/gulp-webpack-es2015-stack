@@ -1,0 +1,43 @@
+extends html/layout.pug
+
+block content
+  form
+    .form-group
+      input#res.form-control(type='number', readonly)
+  .row.text-center
+    .col-xs-12
+      button.btn.btn-danger.btn-lg(data-calculator='AC') AC
+  .row.text-center
+    .col-xs-3
+      button.btn.btn-default.btn-lg(data-calculator='7') 7
+    .col-xs-3
+      button.btn.btn-default.btn-lg(data-calculator='8') 8
+    .col-xs-3
+      button.btn.btn-default.btn-lg(data-calculator='9') 9
+    .col-xs-3
+      button.btn.btn-warning.btn-lg(data-calculator='/') /
+  .row.text-center
+    .col-xs-3
+      button.btn.btn-default.btn-lg(data-calculator='4') 4
+    .col-xs-3
+      button.btn.btn-default.btn-lg(data-calculator='5') 5
+    .col-xs-3
+      button.btn.btn-default.btn-lg(data-calculator='6') 6
+    .col-xs-3
+      button.btn.btn-warning.btn-lg(data-calculator='x') x
+  .row.text-center
+    .col-xs-3
+      button.btn.btn-default.btn-lg(data-calculator='1') 1
+    .col-xs-3
+      button.btn.btn-default.btn-lg(data-calculator='2') 2
+    .col-xs-3
+      button.btn.btn-default.btn-lg(data-calculator='3') 3
+    .col-xs-3
+      button.btn.btn-warning.btn-lg(data-calculator='-') -
+  .row.text-center
+    .col-xs-3
+      button.btn.btn-default.btn-lg(data-calculator='0') 0
+    .col-xs-6
+      button.btn.btn-success.btn-lg(data-calculator='=') =
+    .col-xs-3
+      button.btn.btn-warning.btn-lg(data-calculator='+') +

@@ -1,0 +1,58 @@
+{
+  "name": "gulp-webpack-es2015-stack",
+  "version": "1.0.0",
+  "description": "Front-end Stack with gulp, Jade, Webpack, Babel, ES2015, SASS",
+  "author": "Gairal",
+  "readmeFilename": "README.md",
+  "keywords": [
+    "Front-end",
+    "Jade",
+    "Sass",
+    "css",
+    "JavaScript",
+    "Webpack",
+    "babel",
+    "es6",
+    "es2015"
+  ],
+  "devDependencies": {
+    "browser-sync": "^2.18.1",
+    "require-dir": "^0.3.1",
+    "run-sequence": "^1.2.2",
+    "gulp": "^3.9.1",
+    "del": "^2.2.2",
+    "minimist": "^1.2.0",
+    "gulp-inject": "^4.1.0",
+    "pug": "^2.0.0-beta6",
+    "gulp-pug": "^3.1.0",
+    "gulp-pug-lint": "^0.1.6",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sass-lint": "^1.3.2",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-eslint": "^3.0.1",
+    "gulp-uglify": "^2.0.0",
+    "gulp-rev": "^7.1.2",
+    "gulp-usemin": "^0.3.25",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-zip": "^3.2.0",
+    "gulp-git": "^1.12.0",
+    "gulp-rsync": "^0.0.7",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
+    "gulp-webpack": "^1.5.0",
+    "gulp-jasmine": "^2.4.0",
+    "karma": "^1.1.2",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-spec-reporter": "^0.0.20"
+  },
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "jquery": "^3.1.1"
+  },
+  "scripts": {
+    "postinstall": ""
+  }
+}
