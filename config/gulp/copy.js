@@ -34,8 +34,12 @@ gulp.task('copy:compile', function () {
   ])
   .pipe(gulp.dest(conf.base.compile));
   //Fonts + images
-  return gulp.src([
+  gulp.src([
     conf.base.src + conf.path.fonts + conf.files.fonts
   ], {base: './' + conf.base.src})
+  .pipe(gulp.dest(conf.base.compile));
+
+  //node packages assets
+  return gulp.src(conf.vendor.assets, {base: './'})
   .pipe(gulp.dest(conf.base.compile));
 });
