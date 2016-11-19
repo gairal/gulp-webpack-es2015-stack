@@ -4,9 +4,6 @@
 
 ### TODO
 - [ ] Unit Testing with Jasmine
-- [ ] ESLINT
-- [ ] NPM Shrinkwrap and yarn.lock
-- [ ] RSYNC
 
 ---
 
