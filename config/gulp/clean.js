@@ -1,6 +1,6 @@
-var conf = require('../config.json');
-var gulp = require('gulp');
-var del = require('del');
+const conf = require('../config.json'),
+gulp = require('gulp'),
+del = require('del');
 
 gulp.task('clean', function (cb) {
   'use strict';

@@ -1,5 +1,5 @@
-var conf = require('../config.json');
-var gulp = require('gulp');
+const conf = require('../config.json'),
+gulp = require('gulp');
 
 gulp.task('copy:build', function () {
   'use strict';

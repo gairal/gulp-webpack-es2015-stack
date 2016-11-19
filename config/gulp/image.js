@@ -1,6 +1,6 @@
-var conf = require('../config.json');
-var gulp = require('gulp');
-var imagemin = require('gulp-imagemin');
+const conf = require('../config.json'),
+gulp = require('gulp'),
+imagemin = require('gulp-imagemin');
 
 gulp.task('imagemin:compile', function() {
   'use strict';

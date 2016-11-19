@@ -1,7 +1,7 @@
-var conf = require('../config.json');
-var gulp = require('gulp');
-var runSequence = require('run-sequence');
-var browserSync = require('browser-sync').create();
+const conf = require('../config.json'),
+gulp = require('gulp'),
+runSequence = require('run-sequence'),
+browserSync = require('browser-sync').create();
 
 gulp.task('browser-sync:build', function() {
   'use strict';

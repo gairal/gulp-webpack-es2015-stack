@@ -1,8 +1,8 @@
-var conf = require('../config.json');
-var options = require('./options');
-var gulp = require('gulp');
-var scp = require('gulp-rsync');
-var runSequence = require('run-sequence');
+const conf = require('../config.json'),
+options = require('./options'),
+gulp = require('gulp'),
+scp = require('gulp-rsync'),
+runSequence = require('run-sequence');
 
 gulp.task('rsync', function() {
   return gulp.src(options.src)

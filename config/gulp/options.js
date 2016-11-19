@@ -1,5 +1,5 @@
-var conf = require('../config.json');
-var minimist = require('minimist');
+const conf = require('../config.json'),
+minimist = require('minimist');
 
 var knownOptions = {
   string: 'env',

@@ -1,9 +1,9 @@
-var conf = require('../config.json');
-var gulp = require('gulp');
-var usemin = require('gulp-usemin');
-var uglify = require('gulp-uglify');
-var cleanCss = require('gulp-clean-css');
-var rev = require('gulp-rev');
+const conf = require('../config.json'),
+gulp = require('gulp'),
+usemin = require('gulp-usemin'),
+uglify = require('gulp-uglify'),
+cleanCss = require('gulp-clean-css'),
+rev = require('gulp-rev');
 
 
 gulp.task('usemin', function() {

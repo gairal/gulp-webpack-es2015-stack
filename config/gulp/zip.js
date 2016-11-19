@@ -1,8 +1,8 @@
-var conf = require('../config.json');
-var gulp = require('gulp');
-var zip = require('gulp-zip');
-var runSequence = require('run-sequence');
-var git = require('gulp-git');
+const conf = require('../config.json'),
+gulp = require('gulp'),
+zip = require('gulp-zip'),
+runSequence = require('run-sequence'),
+git = require('gulp-git');
 
 gulp.task('delivery', function (cb){
   'use strict';

@@ -1,9 +1,9 @@
-var conf = require('../config.json');
-var pkg = require('../../package.json');
-var gulp = require('gulp');
-var puglint = require('gulp-pug-lint');
-var pug = require('gulp-pug');
-var inject = require('gulp-inject');
+const conf = require('../config.json'),
+pkg = require('../../package.json'),
+gulp = require('gulp'),
+puglint = require('gulp-pug-lint'),
+pug = require('gulp-pug'),
+inject = require('gulp-inject');
 
 function handleError(err) {
   console.log(err.toString());
