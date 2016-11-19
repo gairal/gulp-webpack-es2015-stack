@@ -146,7 +146,6 @@ gulp deploy
 # Configuration
 Most of the configuration files are in ./config
 * `config.json`: contains the paths to the various kind of files used by Gulp
-* `.htmlhintrc` :htmlhint config files
 * `.eslintrc.json`: eslint config file
 * `sass-lint.yml`: sasslint config file
 * `webpack.conf.json`: Webpack config file
