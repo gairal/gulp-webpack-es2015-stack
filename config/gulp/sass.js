@@ -16,7 +16,7 @@ gulp.task('sass', function () {
     conf.base.src + conf.path.sass + conf.files.sassAll,
     '!' + conf.base.src + conf.path.sass + '**/_mixins.scss'
   ])
-  .pipe(sassLint({configFile: 'config/sass-lint.yml'}))
+  .pipe(sassLint({configFile: 'config/.sass-lint.yml'}))
   .pipe(sassLint.format());
 
   return gulp.src(conf.base.src + conf.path.sass + conf.files.sass)

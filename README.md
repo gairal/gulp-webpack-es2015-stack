@@ -57,7 +57,7 @@ gulp-webpack-es2015-stack/
  │   ├──gulp/                        * Gulp tasks descriptions
  │   ├──.htmlhintrc                  * htmlhint configuration file
  │   ├──.eslintrc.json               * eslint configuration file
- │   ├──sass-lint.yml                * sasslint configuration file (Yaml format)
+ │   ├──.sass-lint.yml               * sasslint configuration file (Yaml format)
  │   ├──config.json                  * variables used got Gulp tasks
  │   ├──karma.conf.js                * Karma configuration file
  │   └──webpack.conf.js              * Webpack configuration file
@@ -147,7 +147,7 @@ gulp deploy
 Most of the configuration files are in ./config
 * `config.json`: contains the paths to the various kind of files used by Gulp
 * `.eslintrc.json`: eslint config file
-* `sass-lint.yml`: sasslint config file
+* `.sass-lint.yml`: sasslint config file
 * `webpack.conf.json`: Webpack config file
 
 # License
