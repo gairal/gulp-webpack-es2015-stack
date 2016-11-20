@@ -13,7 +13,7 @@ function handleError(err) {
 
 gulp.task('js:build', function() {
   'use strict';
-  gulp.src([conf.base.src + conf.files.js])
+  return gulp.src([conf.base.src + conf.files.js])
   .pipe(eslint({configFile: './config/.eslintrc.json'}))
   .pipe(eslint.format())
   .pipe(webpack(webpackConfig))
