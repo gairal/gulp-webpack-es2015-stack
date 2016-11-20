@@ -12,7 +12,7 @@
         "images": "assets/img/",
         "fonts": "assets/fonts/",
         "js": "app/",
-        "root": "root/"
+        "static": "static/"
     },
     "files": {
         "index": "index.html",
@@ -25,7 +25,8 @@
         "js": "**/*.js",
         "fonts": "**",
         "images": "{,*/,*/*/}*.{png,jpg,jpeg,gif}",
-        "root": "**"
+        "static": "**",
+        "hidden": ".**"
     },
     "vendor":{
         "js": [],

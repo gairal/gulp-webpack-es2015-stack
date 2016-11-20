@@ -70,7 +70,7 @@ gulp-webpack-es2015-stack/
  │   │
  │   ├──app/                         * JavaScript/ES2015 files
  │   │
- │   ├──root/                        * files that will be copied to the root of the compiled site (robots.txt, favicon, ...)
+ │   ├──static/                      * files that will be copied to the root of the compiled site (robots.txt, favicon, ...)
  │   │
  │   └──assets/                      * static assets are served here
  │       ├──img/                     * images

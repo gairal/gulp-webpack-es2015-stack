@@ -3,10 +3,10 @@ gulp = require('gulp');
 
 gulp.task('copy:build', function () {
   'use strict';
-  //Root files
+  //static files
   gulp.src([
-    conf.base.src + conf.path.root + conf.files.root,
-    conf.base.src + conf.path.root + conf.files.hidden
+    conf.base.src + conf.path.static + conf.files.static,
+    conf.base.src + conf.path.static + conf.files.hidden
   ])
   .pipe(gulp.dest(conf.base.build));
   //Fonts + Translations files + images
@@ -27,10 +27,10 @@ gulp.task('copy:build', function () {
 
 gulp.task('copy:compile', function () {
   'use strict';
-  //Root files
+  //static files
   gulp.src([
-    conf.base.src + conf.path.root + conf.files.root,
-    conf.base.src + conf.path.root + conf.files.hidden
+    conf.base.src + conf.path.static + conf.files.static,
+    conf.base.src + conf.path.static + conf.files.hidden
   ])
   .pipe(gulp.dest(conf.base.compile));
   //Fonts + images
