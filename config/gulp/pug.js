@@ -16,7 +16,7 @@ gulp.task('pug:build', function() {
     'appName': pkg.name
   };
 
-  gulp.src([conf.base.src + conf.files.pug])
+  return gulp.src([conf.base.src + conf.files.pug])
     .pipe(puglint())
     .pipe(pug({
       locals: myLocals,
