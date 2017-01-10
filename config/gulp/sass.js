@@ -3,6 +3,7 @@ gulp = require('gulp'),
 sass = require('gulp-sass'),
 sassLint = require('gulp-sass-lint'),
 autoprefixer = require('gulp-autoprefixer');
+var sourcemaps = require('gulp-sourcemaps');
 
 function handleError(err) {
   console.log(err.toString());
@@ -20,11 +21,12 @@ gulp.task('sass', function () {
   .pipe(sassLint.format());
 
   return gulp.src(conf.base.src + conf.path.sass + conf.files.sass)
-    .pipe(sass())
-    .on('error', handleError)
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
         browsers: ['last 2 versions'],
         cascade: false
     }))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(conf.base.build + conf.path.css));
 });
