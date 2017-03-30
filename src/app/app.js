@@ -1,20 +1,13 @@
-import $ from 'jquery'
-import 'tether'
-import 'bootstrap'
 import { Calculator } from './calculator/calculator'
 
 class App {
   constructor () {
     this._calculator = new Calculator()
-    this._$input = $('#res')
+    this._input = document.getElementById('res')
   }
 
   init () {
     this.addEvent()
-
-    $(() => {
-      $('[data-toggle="popover"]').popover()
-    })
   }
 
   static factory () {
@@ -24,15 +17,15 @@ class App {
   }
 
   render () {
-    this._$input.val(this._calculator.currNum)
+    this._input.value = this._calculator.currNum
   }
 
   addEvent () {
-    let $buttons = $(':button')
+    let buttons = document.getElementsByTagName('button')
 
-    $.each($buttons, (i, v) => {
-      let elt = $(v)
-      let val = elt.attr('data-calculator')
+    for (let i = 0, l = buttons.length; i < l; i++) {
+      let elt = buttons[i]
+      let val = elt.getAttribute('data-calculator')
       let method
       if (val) {
         switch (val) {
@@ -71,16 +64,14 @@ class App {
         }
 
         if (method) {
-          elt.click(() => {
+          elt.addEventListener('click', e => {
             method()
             this.render()
           })
         }
       }
-    })
+    }
   }
 }
 
-$(() => {
-  App.factory()
-})
+App.factory()

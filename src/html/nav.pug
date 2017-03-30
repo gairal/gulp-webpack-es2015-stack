@@ -1,8 +1,9 @@
-nav.navbar.navbar-fixed-top.navbar-full.navbar-dark.bg-inverse
-  button.navbar-toggler.hidden-lg-up(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
-  #navbarResponsive.collapse.navbar-toggleable-md
-    a.navbar-brand(href='#') Brand
-    ul.nav.navbar-nav
+nav.navbar.navbar-toggleable-xl.fixed-top.navbar-full.navbar-inverse.bg-inverse
+  button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  a.navbar-brand(href='#') Brand
+  #navbarResponsive.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto
       li.nav-item.active
         a.nav-link(href='#') Link
       li.nav-item
