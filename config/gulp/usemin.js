@@ -13,5 +13,5 @@ gulp.task('usemin', function() {
       css: [ cleanCss, 'concat', rev ],
       js: [ uglify, rev ]
     }))
-    .pipe(gulp.dest(conf.base.compile));
+    .pipe(gulp.dest(conf.base.dist));
 });

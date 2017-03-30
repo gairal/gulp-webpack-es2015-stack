@@ -2,7 +2,7 @@
     "base": {
         "src": "src/",
         "build": "build/",
-        "compile": "compile/",
+        "dist": "dist/",
         "test": "test/",
         "vendor": "vendor/"
     },

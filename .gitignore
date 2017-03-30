@@ -42,13 +42,14 @@ nbproject
 validation-status.json
 validation-report.json
 
-# Folders to ignore
-node_modules
-vendor
-public
-build
-compile
-typings
+# Directory to ignore
+node_modules/
+vendor/
+public/
+build/
+compile/
+dist/
+typings/
 
 #ignore src generated html
 _SpecRunner.html

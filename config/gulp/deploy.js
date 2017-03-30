@@ -7,7 +7,7 @@ runSequence = require('run-sequence');
 gulp.task('rsync', function() {
   return gulp.src(options.src)
   .pipe(rsync({
-    root: conf.base.compile,
+    root: conf.base.dist,
     hostname: options.host,
     username: 'webadmin',
     destination: options.dest,
@@ -21,5 +21,5 @@ gulp.task('rsync', function() {
 });
 
 gulp.task('deploy', function (cb){
-  runSequence('compile', 'rsync', cb);
+  runSequence('release', 'rsync', cb);
 });

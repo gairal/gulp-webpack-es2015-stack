@@ -28,6 +28,4 @@ webpackConfig.module.loaders = [{
 	}
 }];
 
-webpackConfig.devtool = 'source-map'
-
 module.exports = webpackConfig;

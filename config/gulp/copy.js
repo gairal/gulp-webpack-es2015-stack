@@ -25,21 +25,21 @@ gulp.task('copy:build', function () {
   .pipe(gulp.dest(conf.base.build));
 });
 
-gulp.task('copy:compile', function () {
+gulp.task('copy:release', function () {
   'use strict';
   //static files
   gulp.src([
     conf.base.src + conf.path.static + conf.files.static,
     conf.base.src + conf.path.static + conf.files.hidden
   ])
-  .pipe(gulp.dest(conf.base.compile));
+  .pipe(gulp.dest(conf.base.dist));
   //Fonts + images
   gulp.src([
     conf.base.src + conf.path.fonts + conf.files.fonts
   ], {base: './' + conf.base.src})
-  .pipe(gulp.dest(conf.base.compile));
+  .pipe(gulp.dest(conf.base.dist));
 
   //node packages assets
   return gulp.src(conf.vendor.assets, {base: './'})
-  .pipe(gulp.dest(conf.base.compile));
+  .pipe(gulp.dest(conf.base.dist));
 });

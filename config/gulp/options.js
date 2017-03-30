@@ -8,7 +8,7 @@ var knownOptions = {
 var options = minimist(process.argv.slice(2), knownOptions);
 var optionsReturn = {};
 optionsReturn.env = options.env;
-optionsReturn.src = conf.base.compile + '/**/*';
+optionsReturn.src = conf.base.dist + '/**/*';
 optionsReturn.host = '';
 optionsReturn.dest = '';
 optionsReturn.apiUrl = '';
@@ -16,7 +16,7 @@ optionsReturn.apiUrl = '';
 switch(options.env) {
     case 'prod':
         optionsReturn.apiUrl = conf.env.prod.api_url;
-        optionsReturn.src = conf.base.compile + '/**/*';
+        optionsReturn.src = conf.base.dist + '/**/*';
         optionsReturn.host = conf.env.prod.host;
         optionsReturn.dest = conf.env.prod.path;
         break;
@@ -28,13 +28,13 @@ switch(options.env) {
         break;
     case 'mock':
         optionsReturn.apiUrl = conf.env.mock.api_url;
-        optionsReturn.src = conf.base.compile + '/**/*';
+        optionsReturn.src = conf.base.dist + '/**/*';
         optionsReturn.host = conf.env.dev.host;
         optionsReturn.dest = conf.env.dev.path;
         break;
     default:
         optionsReturn.apiUrl = conf.env.dev.api_url;
-        optionsReturn.src = conf.base.compile + '/**/*';
+        optionsReturn.src = conf.base.dist + '/**/*';
         optionsReturn.host = conf.env.dev.host;
         optionsReturn.dest = conf.env.dev.path;
         break;

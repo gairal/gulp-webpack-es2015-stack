@@ -6,7 +6,7 @@ gulp.task('default', function (cb) {
   runSequence('build', 'browser-sync:build', 'watch', cb);
 });
 
-gulp.task('run:compile', function (cb) {
+gulp.task('run:dist', function (cb) {
   'use strict';
-  runSequence('compile', 'browser-sync:compile', cb);
+  runSequence('release', 'browser-sync:dist', cb);
 });

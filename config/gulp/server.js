@@ -14,11 +14,11 @@ gulp.task('browser-sync:build', function() {
   });
 });
 
-gulp.task('browser-sync:compile', function() {
+gulp.task('browser-sync:dist', function() {
   'use strict';
   browserSync.init({
     server: {
-      baseDir: conf.base.compile
+      baseDir: conf.base.dist
     },
     reloadDebounce: 2000,
     notify: false

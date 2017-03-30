@@ -2,8 +2,8 @@ const conf = require('../config.json'),
 gulp = require('gulp'),
 sass = require('gulp-sass'),
 sassLint = require('gulp-sass-lint'),
-autoprefixer = require('gulp-autoprefixer');
-var sourcemaps = require('gulp-sourcemaps');
+autoprefixer = require('gulp-autoprefixer'),
+sourcemaps = require('gulp-sourcemaps');
 
 function handleError(err) {
   console.log(err.toString());

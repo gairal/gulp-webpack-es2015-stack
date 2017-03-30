@@ -6,7 +6,7 @@ git = require('gulp-git');
 
 gulp.task('delivery', function (cb){
   'use strict';
-  runSequence('compile', 'zip:compile', cb);
+  runSequence('release', 'zip:release', cb);
 });
 
 gulp.task('zip:build', function () {
@@ -19,12 +19,12 @@ gulp.task('zip:build', function () {
   });
 });
 
-gulp.task('zip:compile', function () {
+gulp.task('zip:release', function () {
   'use strict';
   git.exec({args : 'describe --tags'}, function (err, stdout) {
     var name = stdout.replace(/\r?\n|\r/g,'');
-    return gulp.src([conf.base.compile + '*', conf.base.compile + '.*'])
-    .pipe(zip('release-compile' + name + '.zip'))
+    return gulp.src([conf.base.dist + '*', conf.base.dist + '.*'])
+    .pipe(zip('release-dist' + name + '.zip'))
     .pipe(gulp.dest('.'));
   });
 });

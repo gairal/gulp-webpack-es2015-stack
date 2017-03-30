@@ -116,7 +116,7 @@ browser-sync will display the address and port of your server (by default, `http
 # build files then launch the server and watch files
 gulp
 # compiled version
-gulp run:compile
+gulp run:dist
 ```
 #### Build files
 ```bash
