@@ -2,8 +2,8 @@ const conf = require('../config.json'),
   gulp = require('gulp'),
   webpack = require('gulp-webpack'),
   eslint = require('gulp-eslint'),
-  webpackDevConfig = require('../webpack.dev.conf');
-  webpackProdConfig = require('../webpack.prod.conf');
+  webpackDevConfig = require('../webpack.conf.dev');
+  webpackProdConfig = require('../webpack.conf.prod');
 
 function js (config) {
   'use strict';
