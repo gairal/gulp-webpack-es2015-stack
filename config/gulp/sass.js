@@ -1,7 +1,7 @@
 const conf = require('../config.json'),
 gulp = require('gulp'),
 sass = require('gulp-sass'),
-sassLint = require('gulp-sass-lint'),
+gulpStylelint = require('gulp-stylelint'),
 autoprefixer = require('gulp-autoprefixer'),
 sourcemaps = require('gulp-sourcemaps');
 
@@ -17,8 +17,12 @@ gulp.task('sass', function () {
     conf.base.src + conf.path.sass + conf.files.sassAll,
     '!' + conf.base.src + conf.path.sass + '**/_mixins.scss'
   ])
-  .pipe(sassLint({configFile: './.sass-lint.yml'}))
-  .pipe(sassLint.format());
+  .pipe(gulpStylelint({
+    reporters: [
+      {formatter: 'string', console: true}
+    ]
+  }))
+  .on('error', handleError);
 
   return gulp.src(conf.base.src + conf.path.sass + conf.files.sass)
     .pipe(sourcemaps.init())

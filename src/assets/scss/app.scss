@@ -11,17 +11,18 @@ body {
   padding-top: 70px;
 }
 
-.calc {
-  button {
-    display: block;
-    width: 100%;
-  }
-}
-
 input {
   &[type='text'] {
     height: 50px;
     font-size: 25px;
+  }
+}
+
+//* @define calc; weak
+.calc {
+  button {
+    display: block;
+    width: 100%;
   }
 }
 
