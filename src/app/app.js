@@ -1,32 +1,32 @@
-import { Calculator } from './calculator/calculator'
+import Calculator from './calculator/calculator';
 
 class App {
-  constructor () {
-    this._calculator = new Calculator()
-    this._input = document.getElementById('res')
+  constructor() {
+    this.calculator = new Calculator();
+    this.input = document.getElementById('res');
   }
 
-  init () {
-    this.addEvent()
+  init() {
+    this.addEvent();
   }
 
-  static factory () {
-    let app = new App()
-    app.init()
-    return app
+  static factory() {
+    const app = new App();
+    app.init();
+    return app;
   }
 
-  render () {
-    this._input.value = this._calculator.currNum
+  render() {
+    this.input.value = this.calculator.currNumber;
   }
 
-  addEvent () {
-    let buttons = document.getElementsByTagName('button')
+  addEvent() {
+    const buttons = document.getElementsByTagName('button');
 
-    for (let i = 0, l = buttons.length; i < l; i++) {
-      let elt = buttons[i]
-      let val = elt.getAttribute('data-calculator')
-      let method
+    for (let i = 0, l = buttons.length; i < l; i += 1) {
+      const elt = buttons[i];
+      const val = elt.getAttribute('data-calculator');
+      let method;
       if (val) {
         switch (val) {
           case '0':
@@ -39,39 +39,39 @@ class App {
           case '7':
           case '8':
           case '9':
-            method = () => { this._calculator.stack(+val) }
-            break
+            method = () => { this.calculator.stack(+val); };
+            break;
           case '+':
-            method = () => { this._calculator.add() }
-            break
+            method = () => { this.calculator.add(); };
+            break;
           case '-':
-            method = () => { this._calculator.remove() }
-            break
+            method = () => { this.calculator.remove(); };
+            break;
           case '/':
-            method = () => { this._calculator.divide() }
-            break
+            method = () => { this.calculator.divide(); };
+            break;
           case 'x':
-            method = () => { this._calculator.multiply() }
-            break
+            method = () => { this.calculator.multiply(); };
+            break;
           case 'AC':
-            method = () => { this._calculator.reset() }
-            break
+            method = () => { this.calculator.reset(); };
+            break;
           case '=':
-            method = () => { this._calculator.total() }
-            break
+            method = () => { this.calculator.total(); };
+            break;
           default:
           // console.log('no actions');
         }
 
         if (method) {
-          elt.addEventListener('click', e => {
-            method()
-            this.render()
-          })
+          elt.addEventListener('click', () => {
+            method();
+            this.render();
+          });
         }
       }
     }
   }
 }
 
-App.factory()
+App.factory();

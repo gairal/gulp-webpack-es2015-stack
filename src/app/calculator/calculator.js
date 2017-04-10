@@ -1,77 +1,78 @@
-/// <reference path="../../../typings/index.d.ts" />
-export class Calculator {
-  constructor () {
+class Calculator {
+  constructor() {
     this.operations = {
       add: 'add',
       remove: 'remove',
       multiply: 'multiply',
       divide: 'divide',
-      total: 'total'
-    }
-    this.reset()
+      total: 'total',
+    };
+    this.reset();
   }
 
   // getters / setters
-  get currNum () {
-    return this._currNum
+  get currNumber() {
+    return this.currNum;
   }
 
-  reset () {
-    this._result = null
-    this._currNum = null
-    this._currOpe = null
-    this._isEq = false
+  reset() {
+    this.result = null;
+    this.currNum = null;
+    this.currOpe = null;
+    this.isEq = false;
   }
 
-  add () {
-    this.operation(this.operations.add)
+  add() {
+    this.operation(this.operations.add);
   }
 
-  remove () {
-    this.operation(this.operations.remove)
+  remove() {
+    this.operation(this.operations.remove);
   }
 
-  multiply () {
-    this.operation(this.operations.multiply)
+  multiply() {
+    this.operation(this.operations.multiply);
   }
 
-  divide () {
-    this.operation(this.operations.divide)
+  divide() {
+    this.operation(this.operations.divide);
   }
 
-  total () {
-    this.operation()
+  total() {
+    this.operation();
   }
 
-  operation (ope = this.operations.total) {
-    switch (this._currOpe) {
+  operation(ope = this.operations.total) {
+    switch (this.currOpe) {
       case this.operations.add:
-        this._result = this._result + this._currNum
-        break
+        this.result = this.result + this.currNum;
+        break;
       case this.operations.remove:
-        this._result = this._result - this._currNum
-        break
+        this.result = this.result - this.currNum;
+        break;
       case this.operations.divide:
-        this._result = this._result / this._currNum
-        break
+        this.result = this.result / this.currNum;
+        break;
       case this.operations.multiply:
-        this._result = this._result * this._currNum
-        break
+        this.result = this.result * this.currNum;
+        break;
       case this.operations.total:
       default:
-        this._result = this._currNum
+        this.result = this.currNum;
     }
-    this._currOpe = ope
-    this._currNum = this._result
-    this._isEq = true
+    this.currOpe = ope;
+    this.currNum = this.result;
+    this.isEq = true;
   }
 
-  stack (num) {
-    if (!this._currNum || this._isEq) {
-      this._currNum = 0
-      this._isEq = false
+  stack(num) {
+    if (!this.currNum || this.isEq) {
+      this.currNum = 0;
+      this.isEq = false;
     }
 
-    this._currNum = +(String(this._currNum) + String(num))
+    this.currNum = +(String(this.currNum) + String(num));
   }
 }
+
+export default Calculator;

@@ -7,9 +7,8 @@
         "browser": true,
         "jquery": true
     },
-    "extends": "standard",
+    "extends": "airbnb",
     "rules": {
-        "no-unused-vars": 1,
         "curly": 2,
         "indent": [2, 2, { "SwitchCase": 1 }],
         "eqeqeq": 2,
