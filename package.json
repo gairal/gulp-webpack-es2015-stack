@@ -21,7 +21,8 @@
     "build": "gulp build",
     "release": "gulp release",
     "lint": "gulp lint",
-    "test": "gulp lint"
+    "test": "gulp lint",
+    "precommit": "yarn run lint"
   },
   "devDependencies": {
     "browser-sync": "^2.18.1",
@@ -62,7 +63,8 @@
     "webpack": "^2.3.2",
     "webpack-stream": "^3.2.0",
     "webpack-merge": "^4.1.0",
-    "pre-commit": "1.2.2",
+    "husky": "^0.13.3",
+    "validate-commit-msg": "^2.12.1",
     "gulp-jasmine": "^2.4.2",
     "phantomjs-prebuilt": "^2.1.14",
     "karma": "^1.6.0",
@@ -73,9 +75,5 @@
   "dependencies": {
     "bootstrap": "4.0.0-alpha.6",
     "font-awesome": "4.7.0"
-  },
-  "pre-commit": {
-    "template": "./.gitmessage",
-    "run": ["lint"]
   }
 }
