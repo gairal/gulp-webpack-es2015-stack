@@ -22,7 +22,8 @@
     "release": "gulp release",
     "lint": "gulp lint",
     "test": "gulp lint",
-    "precommit": "yarn run lint"
+    "precommit": "yarn run lint",
+    "commitmsg": "validate-commit-msg"
   },
   "devDependencies": {
     "browser-sync": "^2.18.1",
