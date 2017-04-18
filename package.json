@@ -43,7 +43,7 @@
     "stylelint-config-standard": "^16.0.0",
     "stylelint-selector-bem-pattern": "^1.0.0",
     "gulp-sourcemaps": "~2.4.1",
-    "gulp-clean-css": "^2.0.13",
+    "gulp-clean-css": "^3.0.4",
     "gulp-eslint": "^3.0.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
