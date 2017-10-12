@@ -19,7 +19,7 @@ webpackConfig.module.loaders = [{
 	loader: 'babel-loader',
 	exclude: /node_modules/,
 	query: {
-		presets: ['es2015'],
+		presets: ['env'],
     plugins: ['add-module-exports']
 	}
 }];
