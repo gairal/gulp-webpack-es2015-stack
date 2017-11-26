@@ -17,11 +17,7 @@ webpackConfig.plugins = [
 webpackConfig.module.loaders = [{
 	test: /.js?$/,
 	loader: 'babel-loader',
-	exclude: /node_modules/,
-	query: {
-		presets: ['env'],
-    plugins: ['add-module-exports']
-	}
+	exclude: /node_modules/
 }];
 
 module.exports = webpackConfig;

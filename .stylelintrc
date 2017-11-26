@@ -4,7 +4,8 @@
     "stylelint-scss"
   ],
   "extends": [
-    "stylelint-config-standard"
+    "stylelint-config-sass-guidelines",
+    "stylelint-config-concentric-order"
   ],
   "rules": {
     "plugin/selector-bem-pattern": {
@@ -17,6 +18,9 @@
         ".*\\.js-.*",
         ".*\\.lt-ie.*"
       ]
-    }
+    },
+    "order/properties-alphabetical-order": null,
+    "max-nesting-depth": 3,
+    "number-leading-zero": null
   }
 }

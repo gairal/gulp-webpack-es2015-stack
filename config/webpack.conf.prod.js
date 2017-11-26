@@ -1,6 +1,7 @@
-const baseWebpackConfig = require('./webpack.conf.base'),
-merge = require('webpack-merge'),
-webpack = require('webpack');
+const baseWebpackConfig = require('./webpack.conf.base');
+const merge = require('webpack-merge');
+const webpack = require('webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = merge(baseWebpackConfig, {
   plugins: [
@@ -8,6 +9,7 @@ module.exports = merge(baseWebpackConfig, {
   	  'process.env': {
   	    NODE_ENV: JSON.stringify('production')
   	  }
-  	})
+  	}),
+    new UglifyJsPlugin()
   ]
 })

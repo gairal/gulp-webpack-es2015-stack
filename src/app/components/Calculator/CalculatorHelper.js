@@ -1,4 +1,4 @@
-class Calculator {
+export default class CalculatorHelper {
   constructor() {
     this.operations = {
       add: 'add',
@@ -74,5 +74,3 @@ class Calculator {
     this.currNum = +(String(this.currNum) + String(num));
   }
 }
-
-export default Calculator;
