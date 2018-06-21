@@ -45,7 +45,7 @@ go to [http://localhost:3000](http://localhost:3000) in your browser
     * [Running the app](#running-the-app)
 * [License](#license)
 
-# File structure
+## File structure
 ```
 webpack-stack/
  ├──src/                             * our source files that will be compiled to javascript
@@ -75,8 +75,8 @@ webpack-stack/
  │
  └──package.json                     * what npm uses to manage it's dependencies
 ```
-# Getting Started
-## Dependencies
+## Getting Started
+### Dependencies
 You need to install the following on you system
 * `node` and `npm` (`brew install node`)
 * Ensure you running Node version >= 8.0.0
@@ -85,23 +85,23 @@ You need to install the following on you system
 Then install tools you'll need to run the app
 * sass (`gem install sass`)
 
-## Installing
+### Installing
 * `fork` this repo
 * `clone` your fork
 * `npm install` to install all dependencies
 * `make start` or `npm start` to start the dev server
 
-## Running the app
+### Running the app
 After all dependencies are installed, just run `make start` to start a local server using `webpack-dev-server` which will watch your files and build them.
 webpack-dev-server will display the address and port of your server (by default, `http://0.0.0.0:3000`).
 
-### Build commands
-#### Server
+## Build commands
+### Server
 ```bash
 # build files then launch the server and watch files
 make start
 ```
-#### Build files
+### Build files
 ```bash
 # build files in ./build/ (Webpack, Sass, Pug) and validate them
 make build
@@ -111,11 +111,11 @@ make build
 # Site ready for production
 make release
 ```
-#### Validate files
+### Validate files
 ```bash
 # runs the validations htmlhint, eslint, csslint, sasslint, TsLint
-npm test
+make test
 ```
 
-# License
+## License
 [MIT](/LICENSE.md)
