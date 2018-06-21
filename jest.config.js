@@ -3,10 +3,15 @@ module.exports = {
   verbose: false,
   collectCoverage: true,
   collectCoverageFrom: [
-    'src/js/**/*.js',
+    'src/app/**/*.js',
   ],
   setupFiles: [
     'jest-localstorage-mock',
     'jest-mock-console',
   ],
+  moduleNameMapper: {
+    '@/(.*)$': '<rootDir>/src/app/$1',
+    'Mocks(.*)$': '<rootDir>/test/mocks$1',
+  },
+
 };

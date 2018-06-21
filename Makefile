@@ -28,3 +28,8 @@ release:
 .PHONY: start
 start:
 	npm run start
+
+# debug
+.PHONY: debug
+debug:
+	npm run debug

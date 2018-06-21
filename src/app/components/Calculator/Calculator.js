@@ -1,9 +1,9 @@
-import AbstractComponent from '../AbstractComponent';
+import AbstractComponent from '@/core/AbstractComponent';
 import CalculatorHelper from './CalculatorHelper';
 
 export default class Calculator extends AbstractComponent {
-  constructor() {
-    super({ className: 'js-calculator' });
+  constructor(globals) {
+    super(globals, { className: 'js-calculator' });
 
     this.input = document.getElementById('res');
     this.calculatorHelper = new CalculatorHelper();
@@ -13,7 +13,7 @@ export default class Calculator extends AbstractComponent {
     this.input.value = this.calculatorHelper.currNumber;
   }
 
-  addEvents() {
+  onInit() {
     const buttons = document.getElementsByTagName('button');
 
     for (let i = 0, l = buttons.length; i < l; i += 1) {

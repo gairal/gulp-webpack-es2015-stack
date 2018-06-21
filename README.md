@@ -2,10 +2,8 @@
 
 ---
 
-# TODO
+## TODO
 - [ ] Create NPM package
-- minimist
-- karma
 ---
 
 > A starter Kit for front-end developer including [TailwindCss](https://tailwindcss.com/), [font-awesome](http://fontawesome.io), [Sass](http://sass-lang.com), [Pug](https://pugjs.org/), [Babel](https://babeljs.io), [webpack](http://webpack.github.io), [Jest](https://facebook.github.io/jest/)
@@ -68,8 +66,7 @@ webpack-stack/
  │           ├──_mixins.scss         * for you own Sass mixins here
  │           └──_variables.scss      * for your sass variables
  │
- ├──test/                            * Testing directory
- │    └──spec/                       * Jasmine test definitions
+ ├──test/                            * Jest test definitions
  │
  ├──webpack/                         * Webpack configuration files
  │   ├──webpack.config.base.js       * Base config
