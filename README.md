@@ -1,13 +1,14 @@
-# Front-End Gulp starter
+# Front-End Webpack starter
 
 ---
 
-### TODO
-- [ ] Unit Testing with Mocha
-
+# TODO
+- [ ] Create NPM package
+- minimist
+- karma
 ---
 
-> A starter Kit for front-end developer including [Gulp](http://gulpjs.com), [JQuery](https://github.com/jquery/jquery), [Bootstrap 4](https://v4-alpha.getbootstrap.com), [font-awesome](http://fontawesome.io), [Sass](http://sass-lang.com), [Jade](http://jade-lang.com), [Babel](https://babeljs.io), [ES2015](https://babeljs.io/docs/learn-es2015/), [webpack](http://webpack.github.io), [Karma](https://karma-runner.github.io/)
+> A starter Kit for front-end developer including [TailwindCss](https://tailwindcss.com/), [font-awesome](http://fontawesome.io), [Sass](http://sass-lang.com), [Pug](https://pugjs.org/), [Babel](https://babeljs.io), [webpack](http://webpack.github.io), [Jest](https://facebook.github.io/jest/)
 
 This seed repo is a starter kit for front-end developer that needs an environment allowing them to speed up development while ensuring good practice and overall quality.
 
@@ -18,24 +19,21 @@ This seed repo is a starter kit for front-end developer that needs an environmen
 
 ## Quick start
 ### Pre-requirements
-* Node version >= 4
-* NPM or Yarn
+* Node version >= 8 + npm
 * Sass `gem install sass`
 
 ```bash
 # clone the repo
-git clone https://github.com/gairal/gulp-webpack-es2015-stack.git
+git clone https://github.com/gairal/webpack-stack.git
 
 # change directory to the repo
-cd gulp-webpack-es2015-stack
+cd webpack-stack
 
-# install the repo with npm or yarn
+# install the repo with npm
 npm install
-OR
-yarn install
 
 # start the server
-gulp
+npm start
 ```
 go to [http://localhost:3000](http://localhost:3000) in your browser
 
@@ -47,21 +45,11 @@ go to [http://localhost:3000](http://localhost:3000) in your browser
     * [Dependencies](#dependencies)
     * [Installing](#installing)
     * [Running the app](#running-the-app)
-* [Configuration](#configuration)
 * [License](#license)
 
 # File structure
 ```
-gulp-webpack-es2015-stack/
- ├──config/                          * configuration files and Gulp taks
- │   ├──gulp/                        * Gulp tasks descriptions
- │   ├──.htmlhintrc                  * htmlhint configuration file
- │   ├──.eslintrc.json               * eslint configuration file
- │   ├──.sass-lint.yml               * sasslint configuration file (Yaml format)
- │   ├──config.json                  * variables used got Gulp tasks
- │   ├──karma.conf.js                * Karma configuration file
- │   └──webpack.conf.js              * Webpack configuration file
- │
+webpack-stack/
  ├──src/                             * our source files that will be compiled to javascript
  │   ├──index.pug                    * our index.html
  │   │
@@ -70,85 +58,67 @@ gulp-webpack-es2015-stack/
  │   │
  │   ├──app/                         * JavaScript/ES2015 files
  │   │
- │   ├──static/                      * files that will be copied to the root of the compiled site (robots.txt, favicon, ...)
+ │   ├──root/                        * files that will be copied to the root of the compiled site (robots.txt, favicon, ...)
  │   │
- │   └──assets/                      * static assets are served here
- │       ├──img/                     * images
- │       └──scss/                    * Sass files
- │           ├──app.scss             * Main Sass files
- │           └──common/              * Sass common files
- │               ├──_bootstrap.scss  * Bootstrap Sass module import file
- │               ├──_mixins.scss     * for you own Sass mixins here
- │               └──_variables.scss  * for your sass variables
+ │   ├──img/                         * images
+ │   └──scss/                        * Sass files
+ │       ├──app.scss                 * Main Sass files
+ │       └──common/                  * Sass common files
+ │           ├──_libs.scss           * 3rd-party libs import
+ │           ├──_mixins.scss         * for you own Sass mixins here
+ │           └──_variables.scss      * for your sass variables
  │
  ├──test/                            * Testing directory
  │    └──spec/                       * Jasmine test definitions
  │
+ ├──webpack/                         * Webpack configuration files
+ │   ├──webpack.config.base.js       * Base config
+ │   ├──webpack.config.js            * Development overrides
+ │   └──webpack.config.prod.js       * Production overrides
  │
- ├──gulpfile.js                      * gulp main configuration file
- └──package.json                     * what npm/yarn uses to manage it's dependencies
+ └──package.json                     * what npm uses to manage it's dependencies
 ```
 # Getting Started
 ## Dependencies
 You need to install the following on you system
-* `node` and `npm` (`brew install node`) or `yarn` (`brew install yarn`)
-* Ensure you running Node version >= 4.0.0
+* `node` and `npm` (`brew install node`)
+* Ensure you running Node version >= 8.0.0
 * ruby (`brew install ruby`)
 
 Then install tools you'll need to run the app
 * sass (`gem install sass`)
-* gulp (`npm install gulp -g`)
-* karma (`npm install karma-cli -g`)
 
 ## Installing
 * `fork` this repo
 * `clone` your fork
 * `npm install` to install all dependencies
-* `gulp` to start the dev server
+* `make start` or `npm start` to start the dev server
 
 ## Running the app
-After all dependencies are installed, just run `gulp` to start a local server using `browser-sync` which will watch your files and build them.
-browser-sync will display the address and port of your server (by default, `http://0.0.0.0:3000`).
+After all dependencies are installed, just run `make start` to start a local server using `webpack-dev-server` which will watch your files and build them.
+webpack-dev-server will display the address and port of your server (by default, `http://0.0.0.0:3000`).
 
-### Gulp commands
+### Build commands
 #### Server
 ```bash
 # build files then launch the server and watch files
-gulp
-# compiled version
-gulp run:dist
+make start
 ```
 #### Build files
 ```bash
-# build files in ./build/ (Webpack, Sass, Jade) and validate them
-gulp build
-# "compile" files in ./compile/
+# build files in ./build/ (Webpack, Sass, Pug) and validate them
+make build
+# "compile" files in ./dist/
 # minify and concatenate every css and js including
 # Optimize images compression
 # Site ready for production
-gulp compile
+make release
 ```
 #### Validate files
 ```bash
 # runs the validations htmlhint, eslint, csslint, sasslint, TsLint
-gulp validate
+npm test
 ```
-#### Package site
-```bash
-# compile files then get the last git tag and create a zip named after it
-gulp delivery
-```
-#### Deploy site
-```bash
-# compile the site then send it to a given server path over scp
-gulp deploy
-```
-# Configuration
-Most of the configuration files are in ./config
-* `config.json`: contains the paths to the various kind of files used by Gulp
-* `.eslintrc.json`: eslint config file
-* `.sass-lint.yml`: sasslint config file
-* `webpack.conf.json`: Webpack config file
 
 # License
 [MIT](/LICENSE.md)

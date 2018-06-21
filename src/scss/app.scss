@@ -1,16 +1,12 @@
-@import 'common/variables';
 @import 'common/mixins';
-@import 'common/bootstrap';
+@import 'common/variables';
+@import 'common/libs';
 
 /**************************************************
  ******* Put you code here or in subfolders *******
  *************************************************/
 
 /******* GLOBAL *******/
-body {
-  padding-top: 70px;
-}
-
 input {
   height: 50px;
   font-size: 25px;
