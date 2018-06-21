@@ -1,10 +1,9 @@
 # Front-End Webpack starter
 
----
-
-## TODO
-- [ ] Create NPM package
----
+```
+TODO
+- Create NPM package
+```
 
 > A starter Kit for front-end developer including [TailwindCss](https://tailwindcss.com/), [font-awesome](http://fontawesome.io), [Sass](http://sass-lang.com), [Pug](https://pugjs.org/), [Babel](https://babeljs.io), [webpack](http://webpack.github.io), [Jest](https://facebook.github.io/jest/)
 
