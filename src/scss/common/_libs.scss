@@ -1,3 +1,10 @@
 @import '../../../node_modules/tailwindcss/dist/preflight';
 @import '../../../node_modules/tailwindcss/dist/components';
 @import '../../../node_modules/tailwindcss/dist/utilities';
+
+
+/**
+ * font-awesomes
+ */
+$fa-font-path: '~font-awesome/fonts/';
+@import '~font-awesome/scss/font-awesome';

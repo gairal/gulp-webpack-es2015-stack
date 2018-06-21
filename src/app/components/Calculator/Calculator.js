@@ -1,7 +1,6 @@
 import AbstractComponent from '../AbstractComponent';
 import CalculatorHelper from './CalculatorHelper';
 
-
 export default class Calculator extends AbstractComponent {
   constructor() {
     super({ className: 'js-calculator' });

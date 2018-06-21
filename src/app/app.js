@@ -9,11 +9,5 @@ const init = () => {
   ].forEach(e => e.factory());
 };
 
-
-((callback) => {
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', callback);
-  } else {
-    callback();
-  }
-})(init);
+/* eslint-disable-next-line no-confusing-arrow */
+((g, a) => g.readyState === 'loading' ? g.addEventListener('DOMContentLoaded', a) : a())(document, init);

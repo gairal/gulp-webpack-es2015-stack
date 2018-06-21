@@ -36,15 +36,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(sa|sc|c)ss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader',
-        ],
-        include: path.join(__dirname, '../src'),
-      },
-      {
         test: /\.js$/,
         use: [
           'babel-loader',
@@ -56,6 +47,26 @@ module.exports = {
         test: /\.pug$/,
         loader: 'pug-loader',
         include: path.join(__dirname, '../src'),
+      },
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader',
+        ],
+        include: path.join(__dirname, '../src'),
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        use:
+        {
+          loader: 'file-loader',
+          options: {
+            name: 'fonts/[name].[ext]',
+            publicPath: '../',
+          },
+        },
       },
     ],
   },
