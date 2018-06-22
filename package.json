@@ -23,7 +23,7 @@
     "build": "./node_modules/.bin/webpack --config ./webpack/webpack.config.js",
     "release": "./node_modules/.bin/webpack --config ./webpack/webpack.config.prod.js",
     "lint": "./node_modules/.bin/eslint ./src/ && ./node_modules/.bin/eslint ./test/ && ./node_modules/.bin/stylelint './src/**/*.scss'",
-    "test": "./node_modules/.bin/jest --runInBand"
+    "test": "./node_modules/.bin/jest"
   },
   "husky": {
     "hooks": {
