@@ -1,4 +1,5 @@
 const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -14,6 +15,7 @@ module.exports = {
     filename: 'js/[name].js',
   },
   plugins: [
+    new CleanWebpackPlugin(['build', 'dist'], { root: path.join(__dirname, '../') }),
     new HtmlWebpackPlugin({
       template: './src/index.pug',
       inject: true,
