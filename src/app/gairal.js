@@ -5,6 +5,8 @@ import GLOBALS from './core/GLOBALS';
 import Logger from './core/Logger';
 import Calculator from './components/Calculator';
 
+import '../scss/app.scss';
+
 const init = () => {
   // COMPONENT CREATION
   [

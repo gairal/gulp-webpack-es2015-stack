@@ -9,7 +9,7 @@ const StyleLintPlugin = require('stylelint-webpack-plugin');
 module.exports = {
   entry: {
     app: './src/app/app.js',
-    style: './src/scss/app.scss',
+    // style: './src/scss/app.scss',
   },
   output: {
     filename: 'js/[name].js',
@@ -22,7 +22,7 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
-      chunkFilename: 'css/[id].css',
+      chunkFilename: 'css/[name].css',
     }),
     new StyleLintPlugin({
       reporters: [
@@ -75,6 +75,18 @@ module.exports = {
   resolve: {
     alias: {
       '@': path.resolve(__dirname, '../src/app/'),
+    },
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        styles: {
+          name: 'app',
+          test: /\.(sa|sc|c)ss$/,
+          chunks: 'all',
+          enforce: false,
+        },
+      },
     },
   },
 };

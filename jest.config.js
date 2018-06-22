@@ -10,6 +10,7 @@ module.exports = {
     'jest-mock-console',
   ],
   moduleNameMapper: {
+    '\\.scss$': '<rootDir>/test/mocks/style.js',
     '@/(.*)$': '<rootDir>/src/app/$1',
     'Mocks(.*)$': '<rootDir>/test/mocks$1',
   },
