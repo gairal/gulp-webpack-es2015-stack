@@ -14,5 +14,4 @@ module.exports = {
     '@/(.*)$': '<rootDir>/src/app/$1',
     'Mocks(.*)$': '<rootDir>/test/mocks$1',
   },
-
 };
