@@ -23,9 +23,13 @@
     "build": "./node_modules/.bin/webpack --config ./webpack/webpack.config.js",
     "release": "./node_modules/.bin/webpack --config ./webpack/webpack.config.prod.js",
     "lint": "./node_modules/.bin/eslint ./src/ && ./node_modules/.bin/stylelint './src/**/*.scss'",
-    "test": "./node_modules/.bin/jest --runInBand",
-    "precommit": "npm-run-all lint test",
-    "commitmsg": "commitlint -e $GIT_PARAMS"
+    "test": "./node_modules/.bin/jest --runInBand"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm-run-all lint test",
+      "commit-msg": "commitlint -e $GIT_PARAMS"
+    }
   },
   "devDependencies": {
     "@commitlint/cli": "^6.2.0",
