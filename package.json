@@ -80,6 +80,7 @@
   "dependencies": {
     "es6-promise": "^4.1.1",
     "font-awesome": "^4.7.0",
+    "loggout": "^0.0.2",
     "tailwindcss": "^0.6.0",
     "whatwg-fetch": "^2.0.3"
   }

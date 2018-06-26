@@ -1,11 +1,11 @@
 import mockConsole from 'jest-mock-console';
-import Logger from '@/core/Logger';
+import Loggout from 'loggout';
 import 'Mocks/doc';
 import AbstractComponent from '@/core/AbstractComponent';
 
 describe('AbstractComponent', () => {
   mockConsole();
-  const logger = new Logger({ logLevel: 20 });
+  const logger = Loggout.factory({ level: Loggout.LEVELS.info });
 
   it('Has default props when no options', () => {
     const component = AbstractComponent.factory({ logger });

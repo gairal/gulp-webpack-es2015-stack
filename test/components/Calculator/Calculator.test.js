@@ -1,11 +1,11 @@
 import mockConsole from 'jest-mock-console';
-import Logger from '@/core/Logger';
+import Loggout from 'loggout';
 import 'Mocks/doc';
 import Calculator from '@/components/Calculator';
 
 describe('Calculator', () => {
   mockConsole();
-  const logger = new Logger({ logLevel: 20 });
+  const logger = Loggout.factory({ level: Loggout.LEVELS.info });
   const component = new Calculator({ logger });
 
   it('Has default props', () => {
