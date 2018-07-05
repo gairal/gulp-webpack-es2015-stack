@@ -4,12 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
-const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   entry: {
     app: './src/app/app.js',
-    // style: './src/scss/app.scss',
   },
   output: {
     filename: 'js/[name].js',
@@ -23,11 +21,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
       chunkFilename: 'css/[name].css',
-    }),
-    new StyleLintPlugin({
-      reporters: [
-        { formatter: 'string', console: true },
-      ],
     }),
     new CopyWebpackPlugin([
       { from: './src/img', to: 'img' },
@@ -55,6 +48,7 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
+          'postcss-loader',
           'sass-loader',
         ],
         include: path.join(__dirname, '../src'),

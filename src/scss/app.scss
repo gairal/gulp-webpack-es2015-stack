@@ -1,11 +1,12 @@
+@tailwind preflight;
+@tailwind components;
+
 @import 'common/mixins';
 @import 'common/variables';
-@import 'common/libs';
 
 /**************************************************
- ******* Put you code here or in subfolders *******
+ ******* Put you code here in subdirectories *******
  *************************************************/
+@import 'common/general';
 
-/******* GLOBAL *******/
-
-/******* SECTION XXX *******/
+@tailwind utilities;

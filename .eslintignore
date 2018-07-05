@@ -6,3 +6,4 @@ dist/**
 build/**
 compile/**
 src/index.html
+tailwind.js
