@@ -11,6 +11,7 @@ module.exports = {
   },
   globals: {
     gairal: true,
+    ga: true,
     LOG_LEVEL: true,
   },
   plugins: ['jest'],

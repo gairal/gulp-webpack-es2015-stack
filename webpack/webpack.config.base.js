@@ -4,9 +4,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   entry: {
+    analytics: './src/app/analytics.js',
     app: './src/app/app.js',
   },
   output: {
@@ -21,6 +23,11 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
       chunkFilename: 'css/[name].css',
+    }),
+    new StyleLintPlugin({
+      reporters: [
+        { formatter: 'string', console: true },
+      ],
     }),
     new CopyWebpackPlugin([
       { from: './src/img', to: 'img' },
