@@ -32,25 +32,39 @@ export default class Calculator extends AbstractComponent {
           case '7':
           case '8':
           case '9':
-            method = () => { this.calculatorHelper.stack(+val); };
+            method = () => {
+              this.calculatorHelper.stack(+val);
+            };
             break;
           case '+':
-            method = () => { this.calculatorHelper.add(); };
+            method = () => {
+              this.calculatorHelper.add();
+            };
             break;
           case '-':
-            method = () => { this.calculatorHelper.remove(); };
+            method = () => {
+              this.calculatorHelper.remove();
+            };
             break;
           case '/':
-            method = () => { this.calculatorHelper.divide(); };
+            method = () => {
+              this.calculatorHelper.divide();
+            };
             break;
           case 'x':
-            method = () => { this.calculatorHelper.multiply(); };
+            method = () => {
+              this.calculatorHelper.multiply();
+            };
             break;
           case 'AC':
-            method = () => { this.calculatorHelper.reset(); };
+            method = () => {
+              this.calculatorHelper.reset();
+            };
             break;
           case '=':
-            method = () => { this.calculatorHelper.total(); };
+            method = () => {
+              this.calculatorHelper.total();
+            };
             break;
           default:
           // console.log('no actions');

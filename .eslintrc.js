@@ -14,10 +14,17 @@ module.exports = {
     ga: true,
     LOG_LEVEL: true,
   },
-  plugins: ['jest'],
-  extends: 'airbnb',
+  plugins: ['prettier', 'jest'],
+  extends: ['airbnb', 'prettier'],
   parser: 'babel-eslint',
   rules: {
+    'prettier/prettier': [
+      'error',
+      {
+        singleQuote: true,
+        trailingComma: 'all',
+      },
+    ],
     'react/jsx-filename-extension': 0,
     'no-unused-vars': 1,
     curly: 2,

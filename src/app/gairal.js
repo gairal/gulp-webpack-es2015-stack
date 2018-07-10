@@ -18,7 +18,9 @@ const init = () => {
       name: 'calculator',
       class: Calculator,
     },
-  ].forEach((e) => { GLOBALS[e.name] = e.class.factory(GLOBALS); });
+  ].forEach(e => {
+    GLOBALS[e.name] = e.class.factory(GLOBALS);
+  });
 };
 
 export default init;

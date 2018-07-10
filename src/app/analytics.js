@@ -4,12 +4,16 @@ import 'autotrack/lib/plugins/clean-url-tracker';
 import 'autotrack/lib/plugins/outbound-link-tracker';
 import 'autotrack/lib/plugins/max-scroll-tracker';
 
-const init = (id) => {
-  window.ga = window.ga || ((...args) => { (ga.q = ga.q || []).push(...args); });
+const init = id => {
+  window.ga =
+    window.ga ||
+    ((...args) => {
+      (ga.q = ga.q || []).push(...args);
+    });
   window.ga.l += new Date();
 
   // Track basic JavaScript errors
-  window.addEventListener('error', (e) => {
+  window.addEventListener('error', e => {
     // Don't log the errors from external scripts
     if (e.message === 'Script error.') return;
     ga('send', 'exception', {

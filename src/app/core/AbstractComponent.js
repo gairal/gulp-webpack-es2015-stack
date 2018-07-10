@@ -11,7 +11,9 @@ export default class AbstractComponent {
     if (!className) return false;
 
     // We always use class, not ID
-    this.elts = [].slice.call(document.getElementsByClassName(this.opts.className));
+    this.elts = [].slice.call(
+      document.getElementsByClassName(this.opts.className),
+    );
     if (!this.elts.length) return false;
 
     return true;
@@ -25,7 +27,7 @@ export default class AbstractComponent {
    */
   init() {
     return new Promise((resolve, reject) => {
-      if (!this.exists) reject(new Error('Component doesn\'t exist'));
+      if (!this.exists) reject(new Error('Component doesn’t exist'));
 
       if (this.onInit) this.onInit();
       resolve(this);
