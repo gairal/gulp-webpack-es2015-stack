@@ -1,4 +1,26 @@
-import Chooles from 'chooles';
-import init from './gairal';
+import 'es6-promise/auto';
+import 'whatwg-fetch';
+import Loggout from 'loggout';
 
-Chooles.ready(init);
+import GLOBALS from './core/GLOBALS';
+import Calculator from './components/Calculator';
+
+import '../scss/app.scss';
+
+const init = () => {
+  // COMPONENT CREATION
+  [
+    {
+      name: 'logger',
+      class: Loggout,
+    },
+    {
+      name: 'calculator',
+      class: Calculator,
+    },
+  ].forEach(e => {
+    GLOBALS[e.name] = e.class.factory(GLOBALS);
+  });
+};
+
+export default init;

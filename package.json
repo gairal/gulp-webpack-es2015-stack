@@ -4,7 +4,7 @@
   "description": "Front-end Stack with Pug, Webpack, Babel, ES2016, SASS, Jest",
   "author": "Gairal",
   "readmeFilename": "README.md",
-  "main": "src/app/app.js",
+  "main": "src/app/index.js",
   "keywords": [
     "Front-end",
     "Pug",

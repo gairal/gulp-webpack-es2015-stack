@@ -9,7 +9,7 @@ const StyleLintPlugin = require('stylelint-webpack-plugin');
 module.exports = {
   entry: {
     analytics: './src/app/analytics.js',
-    app: './src/app/app.js',
+    app: './src/app',
   },
   output: {
     filename: 'js/[name].js',
