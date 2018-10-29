@@ -4,7 +4,7 @@ VERSION := $(shell git describe --abbrev=0 --tags)
 # Install project and dependencies
 .PHONY: install
 install:
-	npm install
+	npm i
 
 # Lint and test
 .PHONY: test

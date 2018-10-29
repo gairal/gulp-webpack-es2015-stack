@@ -27,7 +27,7 @@ git clone https://github.com/gairal/webpack-stack.git
 cd webpack-stack
 
 # install the repo with npm
-npm install
+npm i
 
 # start the server
 npm start
@@ -87,7 +87,7 @@ Then install tools you'll need to run the app
 ### Installing
 * `fork` this repo
 * `clone` your fork
-* `npm install` to install all dependencies
+* `npm i` to install all dependencies
 * `make start` or `npm start` to start the dev server
 
 ### Running the app
