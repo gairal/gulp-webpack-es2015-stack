@@ -5,29 +5,32 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 
 module.exports = {
   entry: {
     analytics: './src/app/analytics.js',
-    app: './src/app',
+    main: './src/app',
+    styles: './src/scss/app.scss',
   },
   output: {
     filename: 'js/[name].js',
   },
   plugins: [
-    new CleanWebpackPlugin(['build', 'dist'], {
-      root: path.join(__dirname, '../'),
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/index.pug',
-      inject: true,
-    }),
+    new FixStyleOnlyEntriesPlugin(),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
       chunkFilename: 'css/[name].css',
     }),
     new StyleLintPlugin({
       reporters: [{ formatter: 'string', console: true }],
+    }),
+    new CleanWebpackPlugin(['build', 'dist'], {
+      root: path.join(__dirname, '../'),
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/index.pug',
+      inject: true,
     }),
     new CopyWebpackPlugin([
       { from: './src/img', to: 'img' },
@@ -59,9 +62,10 @@ module.exports = {
         test: /\.(sa|sc|c)ss$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
+          { loader: 'css-loader', options: { importLoaders: 1 } },
           'postcss-loader',
           'sass-loader',
+          'import-glob-loader',
         ],
         include: path.join(__dirname, '../src'),
       },

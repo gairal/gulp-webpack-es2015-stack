@@ -5,8 +5,6 @@ import 'whatwg-fetch';
 // import GLOBALS from './core/GLOBALS';
 import Calculator from './components/Calculator';
 
-import '../scss/app.scss';
-
 const init = () => {
   const GLOBALS = {};
   // COMPONENT CREATION

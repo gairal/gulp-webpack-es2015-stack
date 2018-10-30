@@ -12,7 +12,7 @@ document.body.innerHTML = `
       <button class="p-4 bg-grey-dark text-white text-xl w-1/4" type="button" data-calculator="8">8</button>
       <button class="p-4 bg-grey-dark text-white text-xl w-1/4" type="button" data-calculator="9">9</button>
       <button class="p-4 bg-orange-dark text-white text-xl w-1/4" type="button" data-calculator="/">
-        <i class="fa fa-scissors fa-lg"></i>
+        <i class="fa fa-divide fa-lg"></i>
       </button>
     </div>
     <div class="flex">
